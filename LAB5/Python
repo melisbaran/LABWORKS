@@ -29,10 +29,10 @@ def rep_with_upper(password):
 rep_with_upper(password)
 print(rep_with_upper(password))
 
+
 def swap_letters(password):
     swapPass=password[2:len(password) - 2]
-    return password[len(password) - 2] + swapPass + password[0]+password[1]
-
+    return password[-1]+password[-2] + swapPass + password[0]+password[1]
 print(swap_letters(password))
 
 
