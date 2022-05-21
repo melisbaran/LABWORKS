@@ -1,0 +1,18 @@
+import cv2
+image=cv2.imread('C:\\Users\\melo\\Images\\pht.jpeg')
+cv2.imshow('image', image)
+bl,gr,re = cv2.split(image)
+cv2.imshow('Blue', bl)
+cv2.imshow('Green', gr)
+cv2.imshow('Red', re)
+
+
+print(image.shape)
+for x in range(0,1200):
+    for y in range(0,750):
+        if bl[x,y] > 150:
+            bl[x,y] = 10
+
+mergedimage = cv2.merge([bl,gr,re])
+cv2.imshow(mergedimage)
+cv2.waitKey(0)
